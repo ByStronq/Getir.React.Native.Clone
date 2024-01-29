@@ -3,6 +3,7 @@ import { ScrollView } from "react-native";
 
 import HeaderMain from "../../components/HeaderMain";
 import BannerCarousel from "../../components/BannerCarousel";
+import MainCategories from "../../components/MainCategories";
 
 const HomeScreen: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const HomeScreen: React.FC = () => {
     >
       <HeaderMain />
       <BannerCarousel />
+      <MainCategories />
     </ScrollView>
   );
 };
