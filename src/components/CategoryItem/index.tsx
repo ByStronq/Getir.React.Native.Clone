@@ -2,17 +2,22 @@ import React from "react";
 
 import { TouchableOpacity, Image, Text, Dimensions } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+
 import { Category } from "../../models";
 
-const { width, height } = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 
 type CategoryItemProps = {
   item: Category;
 };
 
 const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
+  const navigation = useNavigation();
+
   return (
     <TouchableOpacity
+      onPress={() => navigation.navigate("CategoryDetails", { category: item })}
       style={{
         width: width * 0.25,
         height: width * 0.24,
